@@ -74,9 +74,12 @@ namespace FootBallApp
                     tranfer = EntityFactory.NieuweTransfer(tranfer.Speler, oldTeam, newTeam, tranfer.TranferPrijs);
                 }
                 tranfer = EntityFactory.NieuweTransfer(tranfer.Speler, tranfer.OldTeam, newTeam, tranfer.TranferPrijs);
+
             }
             _context.Add(tranfer);
             _context.SaveChanges();
+            tranfer.Speler.Team = newTeam;
+            UpdateSpeler(tranfer.Speler);
 
         }
         public Team SelecteerTeam(int stamNummer)
