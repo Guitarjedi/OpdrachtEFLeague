@@ -1,0 +1,12 @@
+C:\Users\Matthijs\source\repos\EfOpgave\FootBallLib\bin\Debug\netcoreapp3.1\FootBallLib.deps.json
+C:\Users\Matthijs\source\repos\EfOpgave\FootBallLib\bin\Debug\netcoreapp3.1\FootBallLib.dll
+C:\Users\Matthijs\source\repos\EfOpgave\FootBallLib\obj\Debug\netcoreapp3.1\FootBallLib.csprojAssemblyReference.cache
+C:\Users\Matthijs\source\repos\EfOpgave\FootBallLib\obj\Debug\netcoreapp3.1\FootBallLib.AssemblyInfoInputs.cache
+C:\Users\Matthijs\source\repos\EfOpgave\FootBallLib\obj\Debug\netcoreapp3.1\FootBallLib.AssemblyInfo.cs
+C:\Users\Matthijs\source\repos\EfOpgave\FootBallLib\bin\Debug\netcoreapp3.1\FootBallLib.runtimeconfig.json
+C:\Users\Matthijs\source\repos\EfOpgave\FootBallLib\bin\Debug\netcoreapp3.1\FootBallLib.runtimeconfig.dev.json
+C:\Users\Matthijs\source\repos\EfOpgave\FootBallLib\bin\Debug\netcoreapp3.1\FootBallLib.pdb
+C:\Users\Matthijs\source\repos\EfOpgave\FootBallLib\obj\Debug\netcoreapp3.1\FootBallLib.csproj.CoreCompileInputs.cache
+C:\Users\Matthijs\source\repos\EfOpgave\FootBallLib\obj\Debug\netcoreapp3.1\FootBallLib.dll
+C:\Users\Matthijs\source\repos\EfOpgave\FootBallLib\obj\Debug\netcoreapp3.1\FootBallLib.pdb
+C:\Users\Matthijs\source\repos\EfOpgave\FootBallLib\obj\Debug\netcoreapp3.1\FootBallLib.genruntimeconfig.cache
