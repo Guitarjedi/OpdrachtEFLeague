@@ -1,5 +1,6 @@
 ﻿using FootBallLib;
 using FootBallLib.Models;
+using Microsoft.EntityFrameworkCore.Update.Internal;
 using System;
 using System.Transactions;
 
@@ -11,10 +12,10 @@ namespace FootBallApp
         {
 
             var repo = new Repository();
-            var team = repo.SelecteerTeam(35);
-            team.Naam = "Anderslecht";
-            repo.UpdateTeam(team);
-
+            var speler = repo.SelecteerSpeler(40);
+            speler.Team = EntityFactory.NieuwTeam("Brogej2", 567, "bla", "bli");
+            repo.UpdateSpeler(speler);
+            Console.WriteLine();
            
         }
     }

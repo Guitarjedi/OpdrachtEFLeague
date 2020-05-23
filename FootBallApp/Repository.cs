@@ -1,5 +1,6 @@
 ﻿using FootBallLib;
 using FootBallLib.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -85,23 +86,25 @@ namespace FootBallApp
         public Team SelecteerTeam(int stamNummer)
         {
 
-            return _context.Teams.Where(t => t.Stamnummer == stamNummer).FirstOrDefault();
+            return _context.Teams.Include(s => s.Spelers).Where(t => t.Stamnummer == stamNummer).FirstOrDefault();
 
         }
         public Speler SelecteerSpeler(int spelerId)
         {
-            return _context.Spelers.Where(s => s.Id == spelerId).FirstOrDefault();
+            return _context.Spelers.Include(s => s.Team).Where(s => s.Id == spelerId).FirstOrDefault();
         }
         public Transfer SelecteerTransfer(int transferId)
         {
-            return _context.Tranfers.Where(t => t.Id == transferId).FirstOrDefault();
+            return _context.Tranfers.Include(t => t.OldTeam).ThenInclude(t => t.Spelers)
+                .Include(t => t.NewTeam).ThenInclude(t => t.Spelers)
+                .Include(t => t.Speler).Where(t => t.Id == transferId).FirstOrDefault();
 
         }
         public void UpdateSpeler(Speler speler)
         {
-            var oldSpeler = SelecteerSpeler(speler.Id);
-            if (oldSpeler == null) throw new Exception($"Speler{speler.Id} not found");
-            oldSpeler = speler;
+            //var oldSpeler = SelecteerSpeler(speler.Id);
+            //if (oldSpeler == null) throw new Exception($"Speler{speler.Id} not found");
+            //oldSpeler = speler;
             _context.SaveChanges();
 
         }
