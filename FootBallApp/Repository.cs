@@ -110,9 +110,9 @@ namespace FootBallApp
         }
         public void UpdateTeam(Team team)
         {
-            var oldTeam = SelecteerTeam(team.Stamnummer);
-            if (oldTeam == null) throw new Exception($"Speler{team.Stamnummer} not found");
-            oldTeam = team;
+            //var oldTeam = SelecteerTeam(team.Stamnummer);
+            //if (oldTeam == null) throw new Exception($"Speler{team.Stamnummer} not found");
+            //oldTeam = team;
             _context.SaveChanges();
         }
 
